@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <div class="gnb">
+        <a href="./main.html"><img src="./2/img/logo.png" alt="logo" class="logo"></a>
+        <a href="#" class="click_login">로그인</a>
+        <ul class="drop"> 
+            <li class="ho"><a href="#">2019</a>
+                <ul class="down">
+                    <li><a href="./map2019Research.html"> 2019조사</a></li>
+                    <li><a href="./map2019Collection.html"> 2019수거</a></li>
+                    <li><a href="./2019chart.html"> 2019쓰레기 조사순위</a></li>
+                    <li><a href="./2019chart.html"> 2019쓰레기 수거순위</a></li>
+                    <li><a href="./map2019Collection-Research.html">기타</a></li>               
+                </ul>
+            </li>
+            <li class="ho"><a href="#">2018</a>
+                <ul class="down">
+                    <li><a href="./map2018Research.html"> 2018조사</a></li>
+                    <li><a href="./map2018Collection.html"> 2018수거</a></li>
+                    <li><a href="./2018chart.html"> 2018쓰레기 조사순위</a></li>
+                    <li><a href="./2018chart.html"> 2018쓰레기 수거순위</a></li>
+                    <li><a href="./map2018Collection-Research.html">기타</a></li>
+                </ul>
+            </li>
+            <li class="ho"><a href="#">2017</a>
+                <ul class="down">
+                    <li><a href="./map2017Research.html"> 2017조사</a></li>
+                    <li><a href="./map2017Collection.html"> 2017수거</a></li>
+                    <li><a href="./2017chart.html"> 2017쓰레기 조사순위</a></li>
+                    <li><a href="./2017chart.html"> 2017쓰레기 수거순위</a></li>
+                    <li><a href="./map2017Collection-Research.html">기타</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <canvas id="myChart" width="400" height="400" style="padding-top: 130px;"></canvas>
+    <canvas id="myChart2" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['전라남도', '경상남도','충청남도', '제주특별자치도', '경상북도', '부산광역시', '인천광역시','전라북도','강원도','울산광역시','경기도'],
+        datasets: [{
+            label: '# of Votes',
+            data: [1365, 95, 251.7, 114.1, 0, 25.4,2070.1,1086,1288,11792.1,291.6],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba( 211, 0, 158, 0.2)',
+                'rgba( 158, 211, 0, 0.2)',
+                'rgba( 0, 241, 249, 0.2)',
+                'rgba( 211, 0, 114, 0.2)',
+                'rgba( 102, 255, 255, 0.2)'
+
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba( 211, 0, 158, 1)',
+                'rgba( 158, 211, 0, 1)',
+                'rgba( 0, 241, 249, 1)',
+                'rgba( 211, 0, 114, 1)',
+                'rgba( 102, 255, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+var ctx = document.getElementById('myChart2');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['전라남도', '경상남도','충청남도', '경기도','강원도','제주특별자치도','전라북도','부산광역시','경상북도','울산광역시','인천광역시'],
+        datasets: [{
+            label: '추정량(ton)',
+            data: [542,96,33,0,65,452,26,0,1,12,104],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba( 211, 0, 158, 0.2)',
+                'rgba( 158, 211, 0, 0.2)',
+                'rgba( 0, 241, 249, 0.2)',
+                'rgba( 211, 0, 114, 0.2)',
+                'rgba( 102, 255, 255, 0.2)'
+
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba( 211, 0, 158, 1)',
+                'rgba( 158, 211, 0, 1)',
+                'rgba( 0, 241, 249, 1)',
+                'rgba( 211, 0, 114, 1)',
+                'rgba( 102, 255, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+</html>

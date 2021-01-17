@@ -1,0 +1,138 @@
+body {
+    background-color: #fff;
+    /* height: 100vh; */
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+h3{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.login_layer {
+    display: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+}
+
+.login_layer>div {
+    background: #fff;
+    width: 600px;
+    padding: 30px !important;
+    margin: 150px auto;
+}
+
+.login_top {
+    text-align: right;
+}
+
+.login_layer span {
+    color: red;
+}
+
+
+
+
+#sec1 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#box1 {
+    width: 150px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    padding-left: 10px !important; 
+    padding-right: 10px !important;
+    background-color: rgb(194, 232, 247);
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+#box1 p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#box1:hover {
+    width: 350px;
+    height: 500px;
+}
+
+#box2 {
+    width: 220px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+#box2 p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#box2:hover {
+    width: 370px;
+    height: 450px;
+}
+
+#box3 {
+    width: 220px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+#box3 p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+#box3:hover {
+    width: 370px;
+    height: 500px;
+}
+
+.sec-img {
+    padding-top: 140px;
+}
+.sec-img img{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
